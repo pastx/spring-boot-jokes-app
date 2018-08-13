@@ -8,8 +8,9 @@ public class JokeServiceImlp implements JokeService {
 
     private final ChuckNorrisQuotes chuckNorrisQuotes;
 
-    public JokeServiceImlp() {
-        this.chuckNorrisQuotes = new ChuckNorrisQuotes();
+    // now I need to deliver Spring Bean of chuckNorrisQuote
+    public JokeServiceImlp(final ChuckNorrisQuotes chuckNorrisQuotes) {
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
     }
 
     @Override
